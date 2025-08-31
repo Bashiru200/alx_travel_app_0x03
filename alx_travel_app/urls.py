@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from listing import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),   
-    path("api/payment/initiate/", listing.iews.initiate_payment, name="initiate_payment"),
-    path("api/payment/verify/", views.verify_payment, name="verify_payment"),
+    path("api/payment/initiate/", views.initiate_payment, name="initiate_payment"),
+    # path("api/payment/verify/", views.verify_payment, name="verify_payment"),
 ]

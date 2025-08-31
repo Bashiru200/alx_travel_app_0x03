@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'listing',  # Your app for handling listings and payments
     'rest_framework',  # Django REST framework for API support
     'corsheaders',  # For handling CORS headers
     'drf_yasg', # Django REST framework's Swagger documentation
@@ -94,6 +95,14 @@ DATABASES = {
         'PORT': '3306',
     }
 }
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.example.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'bashirubarrie12@gmail.com'
+EMAIL_HOST_PASSWORD = 'bashir!@'
+DEFAULT_FROM_EMAIL = 'bashirubarrie12@gmail.com'
 
 
 # Password validation
